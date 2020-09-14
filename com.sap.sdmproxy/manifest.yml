@@ -1,0 +1,12 @@
+---
+applications:
+- name: sdmproxy
+  memory: 724M
+  buildpack: sap_java_buildpack
+  path: ../com.sap.sdmproxy/target/com.sap.sdmproxy-0.0.1-SNAPSHOT.war
+
+  routes:
+  - route: sdmproxy.cfapps.sap.hana.ondemand.com                   
+  env:                             
+    TARGET_RUNTIME: Tomcat  
+  
