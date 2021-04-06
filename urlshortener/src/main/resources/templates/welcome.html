@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>URL Shortener</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p> Welcome to URL Shortener </p>
+    <form action="#" th:action="@{/geturl}" th:object="${url}" method="post">
+    <label for="name">URL</label>
+    <input type="text" th:field="*{URL_NAME}" id="name" placeholder="Name">
+    <span th:if="${#fields.hasErrors('URL_NAME')}" th:errors="URL_NAME"></span>
+    <input type="submit" value="Get URL">   
+</form>
+</body>
+</html>

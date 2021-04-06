@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>URL Shortener</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    
+    <div th:if="${shorturl}">
+   Short url generated is <span th:text="${shorturl}" />
+</div>
+<!-- ELSE -->
+<div th:unless="${shorturl}">
+   Long url generated is <span th:text="${longurl}" />
+</div>
+   
+      
+</body>
+</html>
