@@ -1,1 +1,1 @@
-web: java -jar target/urlshortener-0.0.1-SNAPSHOT.war
+web: java -jar -Dserver.port=$PORT target/urlshortener-0.0.1-SNAPSHOT.war
